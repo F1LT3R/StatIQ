@@ -6,16 +6,21 @@ Lightweight Markdown static-site generator with built-in search & WebSocket relo
 
 ## Features
 
-- Markdown documents exported to static HTML site
-- HTTP Server with auto-reload on file change via Web Sockets 
+- Markdown documents exported to HTML pages _(static-site)_
+- HTTP Server with auto-reload on file change _(Web Sockets)_ 
 - Search generated from Titles, Tags, Dates, Excepts & Markdown content
 - Front Matter for customizing layouts & documents _(posts & pages)_
 - Markdown support for: Anchors, MathJax, LightBox, Emojis, Tasks & Lazy Loaded Images 
-- Built-in Integrations:
+- Simple Templating System for Building Custom Layouts
+- Integrations:
   + SASS to CSS Support for Styling
   + ESBuild for JavaScript Minification
   + Image Compression w/ Sharp, Squoosh-Cli & ImageMin
   + GitHub Workflow for GitHub-Pages Deployment
+  + OpenGraph Tags for Meta & LinkedIn
+  + Twitter Card Tags for X/Twitter
+  + SEO Meta Tags, Canonical URLs & Robots.txt
+  + Open Search & SiteMap XML Generation
 
 ## Document Types
 
