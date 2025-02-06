@@ -1,0 +1,24 @@
+{
+  "name": "statiq",
+  "version": "1.0.0",
+  "description": "Lightweight Markdown static-site generator with built-in search & WebSocket reload.",
+  "main": "lib/build.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/F1LT3R/statiq.git"
+  },
+  "keywords": [
+    "static-site",
+    "blog",
+    "markdown"
+  ],
+  "author": "F1LT3R",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/F1LT3R/statiq/issues"
+  },
+  "homepage": "https://github.com/F1LT3R/statiq#readme"
+}
