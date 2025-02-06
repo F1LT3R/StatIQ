@@ -20,7 +20,7 @@ Lightweight Markdown static-site generator with built-in search & WebSocket relo
   + OpenGraph Tags for Meta & LinkedIn
   + Twitter Card Tags for X/Twitter
   + SEO Meta Tags, Canonical URLs & Robots.txt
-  + Open Search & SiteMap XML Generation
+  + Open Search & SiteMap XML Generationz`
 
 ## Document Types
 
@@ -93,7 +93,7 @@ updated: [
         "author_email": "no@contact.com"
     },
 
-    "social": [
+    "external_links": [
         {
             "type": "GitHub",
             "url": "https://github.com/F1LT3R",
