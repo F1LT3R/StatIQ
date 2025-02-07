@@ -1,0 +1,21 @@
+
+> statiq@1.0.0 test
+> node --test
+
+{ directory: 'dir/foo' }
+[32m✔ document directory set in constructor [90m(2.17763ms)[39m[39m
+[34mℹ tests 1[39m
+[34mℹ suites 0[39m
+[34mℹ pass 1[39m
+[34mℹ fail 0[39m
+[34mℹ cancelled 0[39m
+[34mℹ skipped 0[39m
+[34mℹ todo 0[39m
+[34mℹ duration_ms 89.524833[39m
+
+=============================== Coverage summary ===============================
+Statements   : 100% ( 10/10 )
+Branches     : 100% ( 2/2 )
+Functions    : 100% ( 1/1 )
+Lines        : 100% ( 10/10 )
+================================================================================

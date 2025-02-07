@@ -4,11 +4,12 @@
   "description": "Lightweight Markdown static-site generator with built-in search & WebSocket reload.",
   "type": "module",
   "main": "lib/index.mjs",
-	"scripts": {
-	"test": "node --test",
-	"coverage": "c8 --reporter=html npm test"
-	},
-
+  "scripts": {
+    "test": "node --test",
+    "coverage": "c8 --reporter=html npm test",
+    "prepare": "husky",
+    "check-tests": "c8 --reporter=text-summary npm test | tee .husky/coverage-summary.txt && node .husky/checkCoverage.mjs"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/F1LT3R/statiq.git"
@@ -17,7 +18,7 @@
     "static-site",
     "blog",
     "markdown",
-	"generator"
+    "generator"
   ],
   "author": "F1LT3R",
   "license": "SEE LICENSE IN LICENSE.md",
@@ -33,6 +34,8 @@
     "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-unicorn": "^56.0.1",
     "globals": "^15.14.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
     "prettier": "^3.4.2"
   }
 }

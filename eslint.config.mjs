@@ -1,8 +1,7 @@
 import { FlatCompat } from '@eslint/eslintrc'
 
-// Initialize FlatCompat with the recommended configuration
 const compat = new FlatCompat({
-  baseDirectory: process.cwd(), // Base directory of your project
+  baseDirectory: process.cwd(),
   recommendedConfig: {
     extends: ['eslint:recommended'],
   },
@@ -14,7 +13,7 @@ export default [
       node: true,
       es2023: true,
     },
-    extends: ['plugin:prettier/recommended'], // Use Prettier recommended settings
+    extends: ['plugin:prettier/recommended'],
     parserOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
@@ -27,17 +26,24 @@ export default [
   }),
 
   ...compat.config({
-    plugins: ['unicorn'], // Add Unicorn plugin
-    extends: ['plugin:unicorn/recommended'], // Use Unicorn's recommended rules
+    plugins: ['unicorn'],
+    extends: ['plugin:unicorn/recommended'],
     rules: {
-      // Disable or override specific Unicorn rules
-      'unicorn/no-null': 'warn', // Allow null, but warn
+      'unicorn/no-null': 'warn',
       'unicorn/filename-case': [
         'error',
         {
-          case: 'camelCase', // Enforce camelCase filenames
+          case: 'camelCase',
         },
       ],
     },
   }),
+
+  // Override for specific files (e.g., check-coverage.mjs)
+  {
+    files: ['.husky/checkCoverage.mjs'],
+    rules: {
+      'unicorn/no-process-exit': 'off',
+    },
+  },
 ]
