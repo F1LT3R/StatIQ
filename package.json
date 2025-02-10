@@ -5,6 +5,8 @@
   "type": "module",
   "main": "lib/index.mjs",
   "scripts": {
+	"start": "NODE_ENV=development node lib/index.mjs",
+	"build": "NODE_ENV=production node lib/build.mjs",
     "test": "node --test",
     "coverage": "c8 --reporter=html npm test",
     "prepare": "husky",
