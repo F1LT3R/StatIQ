@@ -7,20 +7,20 @@ Lightweight Markdown static-site generator with built-in search & WebSocket relo
 ## Features
 
 - Markdown documents exported to HTML pages _(static-site)_
-- HTTP Server with auto-reload on file change _(Web Sockets)_ 
+- HTTP Server with auto-reload on file change _(Web Sockets)_
 - Search generated from Titles, Tags, Dates, Excepts & Markdown content
 - Front Matter for customizing layouts & documents _(posts & pages)_
-- Markdown support for: Anchors, MathJax, LightBox, Emojis, Tasks & Lazy Loaded Images 
+- Markdown support for: Anchors, MathJax, LightBox, Emojis, Tasks & Lazy Loaded Images
 - Simple Templating System for Building Custom Layouts
 - Integrations:
-  + SASS to CSS Support for Styling
-  + ESBuild for JavaScript Minification
-  + Image Compression w/ Sharp, Squoosh-Cli & ImageMin
-  + GitHub Workflow for GitHub-Pages Deployment
-  + OpenGraph Tags for Meta & LinkedIn
-  + Twitter Card Tags for X/Twitter
-  + SEO Meta Tags, Canonical URLs & Robots.txt
-  + Open Search & SiteMap XML Generationz`
+    - SASS to CSS Support for Styling
+    - ESBuild for JavaScript Minification
+    - Image Compression w/ Sharp, Squoosh-Cli & ImageMin
+    - GitHub Workflow for GitHub-Pages Deployment
+    - OpenGraph Tags for Meta & LinkedIn
+    - Twitter Card Tags for X/Twitter
+    - SEO Meta Tags, Canonical URLs & Robots.txt
+    - Open Search & SiteMap XML Generationz`
 
 ## Document Types
 
@@ -74,107 +74,113 @@ updated: [
 
 ```json
 {
-    "site": {
-        "title": "F1LT3R.me",
-        "excerpt": "My Developer Blog",
-        "description": "My Developer Blog",
-        "keywords": ["F1LT3R", "blog", "developer", "JavaScript", "web", "mobile"],
-        "permalink": "https://f1lt3r.me",
-        "baseurl": "https://f1lt3r.me",
-        "ogtype": "website",
-        "site_name": "F1LT3R.me",
-        "twitter_site": "@AlGMacD",
-        "twitter_creator": "@AlGMacD",
-        "thumbnail": "https://f1lt3r.me/assets/f1lt3r.me.png",
-        "logo": "assets/img/F1LT3R-logo.png",
-        "author_nickname": "F1LT3R",
-        "author_name": "Alistair G MacDonald",
-        "author_avatar": "/assets/img/F1LT3R-avatar.jfif",
-        "author_email": "no@contact.com"
-    },
+	"site": {
+		"title": "F1LT3R.me",
+		"excerpt": "My Developer Blog",
+		"description": "My Developer Blog",
+		"keywords": [
+			"F1LT3R",
+			"blog",
+			"developer",
+			"JavaScript",
+			"web",
+			"mobile"
+		],
+		"permalink": "https://f1lt3r.me",
+		"baseurl": "https://f1lt3r.me",
+		"ogtype": "website",
+		"site_name": "F1LT3R.me",
+		"twitter_site": "@AlGMacD",
+		"twitter_creator": "@AlGMacD",
+		"thumbnail": "https://f1lt3r.me/assets/f1lt3r.me.png",
+		"logo": "assets/img/F1LT3R-logo.png",
+		"author_nickname": "F1LT3R",
+		"author_name": "Alistair G MacDonald",
+		"author_avatar": "/assets/img/F1LT3R-avatar.jfif",
+		"author_email": "no@contact.com"
+	},
 
-    "external_links": [
-        {
-            "type": "GitHub",
-            "url": "https://github.com/F1LT3R",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-        },
-        {
-            "type": "NPM",
-            "url": "https://www.npmjs.com/~f1lt3r",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg"
-        },
-        {
-            "type": "LinkedIn",
-            "url": "https://linked.in/F1LT3R",
-            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
-        },
-        {
-            "type": "DEV.to",
-            "url": "https://dev.to/F1LT3R",
-            "logo": "https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
-        },
-        {
-            "type": "Medium",
-            "url": "https://medium/F1LT3R",
-            "logo": "/assets/logo/social-medium.svg"
-        }
-    ],
+	"external_links": [
+		{
+			"type": "GitHub",
+			"url": "https://github.com/F1LT3R",
+			"logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+		},
+		{
+			"type": "NPM",
+			"url": "https://www.npmjs.com/~f1lt3r",
+			"logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg"
+		},
+		{
+			"type": "LinkedIn",
+			"url": "https://linked.in/F1LT3R",
+			"logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
+		},
+		{
+			"type": "DEV.to",
+			"url": "https://dev.to/F1LT3R",
+			"logo": "https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
+		},
+		{
+			"type": "Medium",
+			"url": "https://medium/F1LT3R",
+			"logo": "/assets/logo/social-medium.svg"
+		}
+	],
 
-    "build": {
-        "auto_clean": true,
+	"build": {
+		"auto_clean": true,
 
-        "watch_dir": "src",
+		"watch_dir": "src",
 
-        "template_dir": "src/templates/",
+		"template_dir": "src/templates/",
 
-        "dist_dir": "_site",
+		"dist_dir": "_site",
 
-        "home_dir": {
-            "src": "src/home",
-            "dest": "_site"
-        },
+		"home_dir": {
+			"src": "src/home",
+			"dest": "_site"
+		},
 
-        "pages_dir": {
-            "src": "src/pages",
-            "dest": "_site/pages"
-        },
+		"pages_dir": {
+			"src": "src/pages",
+			"dest": "_site/pages"
+		},
 
-        "posts_dir": {
-            "src": "src/posts",
-            "dest": "_site/posts"
-        },
+		"posts_dir": {
+			"src": "src/posts",
+			"dest": "_site/posts"
+		},
 
-        "copy_files": [
-            {
-                "src": "src/assets",
-                "dest": "_site/assets",
-            },
-            {
-                "src": "src/vendor/",
-                "dest": "_site/vendor"
-            }
-        ],
+		"copy_files": [
+			{
+				"src": "src/assets",
+				"dest": "_site/assets"
+			},
+			{
+				"src": "src/vendor/",
+				"dest": "_site/vendor"
+			}
+		],
 
-        "templates": {
-            "index": {
-                "base_template": "src/templates/index.html",
-                "head_template": "src/templates/head.html",
-                "header_template": "src/templates/header.html",
-                "nav_template": "src/templates/nav.html",
-                "main_template": "src/templates/posts.html",
-                "footer_template": "src/templates/footer.html"
-            },
+		"templates": {
+			"index": {
+				"base_template": "src/templates/index.html",
+				"head_template": "src/templates/head.html",
+				"header_template": "src/templates/header.html",
+				"nav_template": "src/templates/nav.html",
+				"main_template": "src/templates/posts.html",
+				"footer_template": "src/templates/footer.html"
+			},
 
-            "post": {
-                "main_template": "src/templates/post.html"
-            },
+			"post": {
+				"main_template": "src/templates/post.html"
+			},
 
-            "page": {
-                "main_template": "src/templates/page.html"
-            }
-        }
-    }
+			"page": {
+				"main_template": "src/templates/page.html"
+			}
+		}
+	}
 }
 ```
-
