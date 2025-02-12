@@ -31,6 +31,7 @@ export default [
 		plugins: ['unicorn'],
 		extends: ['plugin:unicorn/recommended'],
 		rules: {
+			'unicorn/prevent-abbreviations': 'off',
 			'unicorn/no-null': 'warn',
 			'unicorn/filename-case': [
 				'error',

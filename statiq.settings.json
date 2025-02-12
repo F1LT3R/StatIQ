@@ -54,14 +54,17 @@
 
 	"build": {
 		"site": {
-			"src": "src",
-			"dist": "_site"
+			"src": "src"
 		},
 
 		"document": [
 			{
 				"src": "src/**/*.md",
 				"dist": "_site"
+			},
+			{
+				"src": "src/**/*.md",
+				"dist": "_site.alt"
 			}
 		],
 
