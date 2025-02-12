@@ -1,43 +1,57 @@
 {
-  "name": "statiq",
-  "version": "1.0.0",
-  "description": "Lightweight Markdown static-site generator with built-in search & WebSocket reload.",
-  "type": "module",
-  "main": "lib/index.mjs",
-  "scripts": {
-	"start": "NODE_ENV=development node lib/index.mjs",
-	"build": "NODE_ENV=production node lib/build.mjs",
-    "test": "node --test",
-    "coverage": "c8 --reporter=html npm test",
-    "prepare": "husky",
-    "check-tests": "c8 --reporter=text-summary npm test | tee .husky/coverage-summary.txt && node .husky/checkCoverage.mjs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/F1LT3R/statiq.git"
-  },
-  "keywords": [
-    "static-site",
-    "blog",
-    "markdown",
-    "generator"
-  ],
-  "author": "F1LT3R",
-  "license": "SEE LICENSE IN LICENSE.md",
-  "bugs": {
-    "url": "https://github.com/F1LT3R/statiq/issues"
-  },
-  "homepage": "https://github.com/F1LT3R/statiq#readme",
-  "devDependencies": {
-    "@eslint/js": "^9.19.0",
-    "c8": "^10.1.3",
-    "eslint": "^9.19.0",
-    "eslint-config-prettier": "^10.0.1",
-    "eslint-plugin-prettier": "^5.2.3",
-    "eslint-plugin-unicorn": "^56.0.1",
-    "globals": "^15.14.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^15.4.3",
-    "prettier": "^3.4.2"
-  }
+	"name": "statiq",
+	"version": "1.0.0",
+	"description": "Lightweight Markdown static-site generator with built-in search & WebSocket reload.",
+	"type": "module",
+	"bin": {
+		"statiq": "./lib/cli.js"
+	},
+	"scripts": {
+		"start": "NODE_ENV=development node lib/cli.mjs",
+		"build": "NODE_ENV=production node lib/build.mjs",
+		"test": "node --test",
+		"coverage": "c8 --all --include='lib/**/*.mjs' --exclude='**/*.test.mjs' --reporter=html npm test",
+		"prepare": "husky",
+		"check-tests": "c8 --all --include='lib/**/*.mjs' --exclude='**/*.test.mjs' --reporter=text-summary npm test | tee .husky/coverage-summary.txt && node .husky/checkCoverage.mjs"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/F1LT3R/statiq.git"
+	},
+	"keywords": [
+		"static-site",
+		"blog",
+		"markdown",
+		"generator"
+	],
+	"author": "F1LT3R",
+	"license": "SEE LICENSE IN LICENSE.md",
+	"bugs": {
+		"url": "https://github.com/F1LT3R/statiq/issues"
+	},
+	"homepage": "https://github.com/F1LT3R/statiq#readme",
+	"devDependencies": {
+		"@eslint/js": "^9.19.0",
+		"c8": "^10.1.3",
+		"eslint": "^9.19.0",
+		"eslint-config-prettier": "^10.0.1",
+		"eslint-plugin-prettier": "^5.2.3",
+		"eslint-plugin-unicorn": "^56.0.1",
+		"globals": "^15.14.0",
+		"husky": "^9.1.7",
+		"lint-staged": "^15.4.3",
+		"prettier": "^3.4.2"
+	},
+	"dependencies": {
+		"chokidar": "^4.0.3",
+		"front-matter": "^4.0.2",
+		"highlight.js": "^11.11.1",
+		"markdown-it": "^14.1.0",
+		"markdown-it-anchor": "^9.2.0",
+		"markdown-it-emoji": "^3.0.0",
+		"markdown-it-image-lazy-loading": "^2.0.1",
+		"markdown-it-linkify-images": "^4.0.0",
+		"markdown-it-task-lists": "^2.1.1",
+		"picomatch": "^4.0.2"
+	}
 }

@@ -10,6 +10,10 @@
 	"eslint.validate": ["javascript"],
 	"eslint.format.enable": true,
 	"prettier.requireConfig": true,
-	"eslint.workingDirectories": [{ "mode": "auto" }],
-  }
-  
+	"eslint.workingDirectories": [
+		{
+			"mode": "auto"
+		}
+	],
+	"cSpell.words": ["linkify", "markdownit", "ogtype", "statiq"]
+}

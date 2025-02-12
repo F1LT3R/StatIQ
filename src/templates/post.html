@@ -1,0 +1,31 @@
+<div class="hero">
+    <div class="img" style="background-image: url({{doc.attributes.thumbnail}}); width:100%;"></div>
+</div>
+
+<div class="post">
+    <h1>{{doc.attributes.title}}</h1>
+
+    <p class="post-meta">
+        <time>{{postdate}}</time>
+
+        <span class="post-tags">
+            {{#each doc.attributes.tags as | tag |}}
+            <span class="post-tag"><a href="/search/{{tag}}">{{tag}}</a></span>
+            {{/each}}
+            <span class="post-category"
+                ><a href="/search/{{post.attribuites.type}}">{{doc.attributes.type}}</a></span
+            >
+        </span>
+    </p>
+
+    <article class="markdown-body">{{{doc.html}}}</article>
+
+    <div class="sign">
+        <pre>
+      __     ___ __  __  
+__   |_  /||  |   _)|__) 
+     |    ||__|  __)| \ 
+</pre
+        >
+    </div>
+</div>

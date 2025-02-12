@@ -1,78 +1,3 @@
-# StatIQ
-
-Lightweight Markdown static-site generator with built-in search & WebSocket reload.
-
-[Licence](./LICENSE.md)
-
-## Features
-
-- Markdown documents exported to HTML pages _(static-site)_
-- HTTP Server with auto-reload on file change _(Web Sockets)_
-- Search generated from Titles, Tags, Dates, Excepts & Markdown content
-- Front Matter for customizing layouts & documents _(posts & pages)_
-- Markdown support for: Anchors, MathJax, LightBox, Emojis, Tasks & Lazy Loaded Images
-- Simple Templating System for Building Custom Layouts
-- Integrations:
-    - SASS to CSS Support for Styling
-    - ESBuild for JavaScript Minification
-    - Image Compression w/ Sharp & ImageMin
-    - GitHub Workflow for GitHub-Pages Deployment
-    - OpenGraph Tags for Meta & LinkedIn
-    - Twitter Card Tags for X/Twitter
-    - SEO Meta Tags, Canonical URLs & Robots.txt
-    - Open Search & SiteMap XML Generation
-
-## Document Types
-
-1. Home
-2. Pages
-3. Posts
-
-## Front Matter
-
-### Posts
-
-```yaml
----
-template: post
-title: 'Creating a Static Site Generator'
-permalink: creating-a-static-site-generator
-thumbnail: creating-a-static-site-generator.jpg
-tags: [static-site, Node.js, Markdown]
-excerpt: 'Presenting StatIQ - A lightweight Markdown static-site generator with built-in search & WebSocket reload.'
-authors: [F1LT3R]
-featured: true
-layout: default
-date: '2025/02/29 13:59'
-updated: [
-	'2025/03/01 15:00',
-	'2025/04/01 16:00'
-]
----
-```
-
-## Pages
-
-```yaml
----
-template: page
-title: 'My Portfolio'
-permalink: portfolio
-tags: [projects, showcase, resume, video]
-excerpt: 'Welcome to my portfolio where you can see examples of my work.'
-authors: [F1LT3R]
-layout: full-width
-date: '2025/02/29 13:59'
-updated: [
-	'2025/03/01 15:00',
-	'2025/04/01 16:00'
-]
----
-```
-
-## Site Settings
-
-```json
 {
 	"site": {
 		"title": "F1LT3R",
@@ -137,6 +62,10 @@ updated: [
 			{
 				"src": "src/**/*.md",
 				"dist": "_site"
+			},
+			{
+				"src": "src/**/*.md",
+				"dist": "_site.alt"
 			}
 		],
 
@@ -203,4 +132,3 @@ updated: [
 		}
 	}
 }
-```
