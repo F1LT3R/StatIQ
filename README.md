@@ -70,7 +70,54 @@ updated: [
 ---
 ```
 
+## Permalinks
+
+If the `permalink` is missing from front-matter, the output `index.html` will mirror the src directory structure. If the `permalink` is present, the `index.html` will be output to a `dist/{permalink}"` directory.
+
+### Example
+
+With the following front-matter and `statiq.settings.json`, the location of the output HTML would be `_site_/about-permalinks/index.html`.
+
+```yaml
+# src/posts/2025-02-12_About-Permalinks/About-Permalinks.md
+---
+template: post
+permalink: about-permalinks
+title: 'Learning About Permalinks'
+---
+```
+
+```js
+{
+	"build": {
+		"document": [
+			{
+				"src": "src/**/*.md",
+				"dist": "_site"
+			},
+		]
+	}
+}
+```
+
+Only markdown documents use the permalink structure. All other files are written to mirror the directory structure of your `src` directory, for example:
+
+```
+_site/posts/2025-02-12_About-Permalinks/data.zip
+```
+
+Any references to other assets in the output HTML file, will be linked the mirror of your `src` directory structure.
+
+```html
+<!-- _site_/about-permalinks/index.html -->
+<a href="/posts/2025-02-12_About-Permalinks/data.zip">data.zip</a>
+```
+
+This approach allows for greater flexibility. You can use multiple permalinks for various markdown documents in the same directory, without having to copy the linked resources twice. This also allows you to change your permalinks, without changing the search engine indexes of other files references in the document.
+
 ## Site Settings
+
+s
 
 ```json
 {

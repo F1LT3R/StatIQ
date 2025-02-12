@@ -53,9 +53,9 @@
 	],
 
 	"build": {
-		"site": {
-			"src": "src"
-		},
+		"root": "src",
+
+		"unlink": ["site_", "site.alt"],
 
 		"document": [
 			{

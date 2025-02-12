@@ -2,3 +2,5 @@ node_modules/
 coverage/
 .husky/_/
 .husky/coverage-summary.txt
+_site/
+_site.alt/

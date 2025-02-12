@@ -1,7 +1,6 @@
 ---
 template: post
 title: 'Post Two'
-permalink: post-two
 thumbnail: post-two.jpg
 tags: [post, two]
 excerpt: 'This is the second post created on this example StatIQ site.'
