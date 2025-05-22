@@ -51,7 +51,7 @@ updated: [
 ---
 ```
 
-## Pages
+### Pages
 
 ```yaml
 ---
@@ -70,11 +70,13 @@ updated: [
 ---
 ```
 
-## Permalinks
+### Front Matter Fields
+
+#### `permalink`
 
 If the `permalink` is missing from front-matter, the output `index.html` will mirror the src directory structure. If the `permalink` is present, the `index.html` will be output to a `dist/{permalink}"` directory.
 
-### Example
+##### Example
 
 With the following front-matter and `statiq.settings.json`, the location of the output HTML would be `_site_/about-permalinks/index.html`.
 
